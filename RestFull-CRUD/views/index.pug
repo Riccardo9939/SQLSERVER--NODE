@@ -1,18 +1,9 @@
 block content
   h1= title
-  p Welcome to #{title}
+  p  #{title}
 
-  form(method='POST' action='/users')
-    div  
-      label(for='Unit') Unit:
-      br
-      input(type='text', placeholder='Unit name' name='Unit')
-    div  
-      label(for='Cost') Cost:
-      br
-      input(type='text', placeholder='xy' name='Cost')
-    div  
-      label(for='Hit_Speed') Hit speed:
-      br
-      input(type='text', placeholder='xy sec' name='Hit_Speed')
-    button(type='submit') Invia
+
+  each c in cl
+    h1 #{c.Unit}
+    a(href=`/dettagli/${c.Unit}`)
+      img(src=`/images/${c.Unit}.png`)

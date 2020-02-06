@@ -4,10 +4,10 @@ const sql = require('mssql');
 var createError = require('http-errors');
 
 const config = {
-  user: 'malizia.fabio',  //Vostro user name
-  password: 'scuola2019*', //Vostra password
-  server: "213.140.22.23\\sqlexpress",  //Stringa di connessione
-  database: 'fmClashRoyale', //(Nome del DB)
+  user: 'campari.riccardo',  //Vostro user name
+  password: 'xxx123#', //Vostra password
+  server: "213.140.22.237",  //Stringa di connessione
+  database: 'campari.riccardo', //(Nome del DB)
 }
 
 //Function to connect to database and execute query

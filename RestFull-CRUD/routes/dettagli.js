@@ -36,15 +36,16 @@ let executeQuery = function (res, query, next) {
 }
 
 let MandaPug = function (res,recordset) {
-    res.render('index', {
-        title:'TRUPPE ClashRoyale',
-        cl:recordset,
+    let cl = recordset[0];
+    res.render('dettagli', {
+        title:'INFROMAZIONI CARTA',
+        cl: cl,
     })
 }
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-  let sqlQuery = "select * from dbo.[cr-unit-attributes]";
+router.get('/:Unit', function (req, res, next) {
+  let sqlQuery = `select * from dbo.[cr-unit-attributes] WHERE Unit = '${req.params.Unit}'`;
   executeQuery(res, sqlQuery, next);
 });
 
